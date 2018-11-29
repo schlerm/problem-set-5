@@ -34,7 +34,11 @@ while(true){
   if(height >= 1 && height <= 23 && Number.isInteger(height)){
     break
   }
-}
+};
+let hashtag='#'
+let lines='<code>'
+let spaces=height-2
+let i=1
 
 
   document.getElementById("mario-easy-output").innerHTML=lines;
@@ -78,16 +82,16 @@ function marioAgain() {
   // WRITE YOUR EXERCISE 2 CODE HERE
 
   while (true){
-     height=prompt("Please enter a valid height");
+     height=prompt("Enter a height value between 1 and 23.");
      height=Number(height);
      if(height>=1 && height<=23 && Number.isInteger(height)){
-       break;
-     };
+       break
+     }
    };
    let i=1;
-   let hash='#';
+   let hashtag='#';
    let lines="<code>";
-   let spaces_Before=height-2;
+   let space_Before=height-2;
    let spaces_After='&nbsp'+'&nbsp';
    while (i<=height){
      let a='';
@@ -95,8 +99,8 @@ function marioAgain() {
        a+='&nbsp;';
      }
      spaces_Before--;
-     hash=hash+'#';
-     lines=lines+a+hash+spaces_After+hash+"</br>";
+     hashtag=hashtag+'#';
+     lines=lines+a+hash+spaces_After+hashtag+"</br>";
      i++;
    }
    document.getElementById("mario-hard-output").innerHTML=lines;
